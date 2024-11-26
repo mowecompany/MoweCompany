@@ -1,0 +1,110 @@
+---
+import { Image } from 'astro:assets';
+import "@/styles/globals.css";
+---
+
+<section class="bg-vampire py-16" id="services">
+  <div class="container mx-auto px-4 mt-20 mb-20">
+    <!-- Encabezado principal -->
+    <div class="bg-[#131316] rounded-2xl p-8 mb-6 relative overflow-hidden">
+      <div class="absolute bottom-0 right-0 w-96 h-60 bg-kiwi/20 blur-2xl"></div>
+      <div class="text-center mb-12 relative z-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Servicios que transforman tu mundo digital
+        </h1>
+        <p class="text-gray-300 max-w-3xl mx-auto">
+          En Mowe Company, ofrecemos servicios innovadores como creación de
+          páginas web, desarrollo de aplicaciones móviles y asesoramiento especializado,
+          diseñados para optimizar tu negocio y mejorar tu presencia digital.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tarjeta de Creación Web -->
+    <div class="bg-[#131316] rounded-2xl p-8 mb-6 relative overflow-hidden">
+      <div class="absolute bottom-0 right-0 w-96 h-60 bg-kiwi/20 blur-2xl"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center relative z-10">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} 
+                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">Creación de páginas web</h2>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Diseñamos sitios web modernos, funcionales y adaptados a tus necesidades.
+          </p>
+          <a href="/contact" class="inline-flex items-center text-white hover:text-gray-200">
+            Empezar
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div class="md:w-1/2 flex justify-end">
+          <Image 
+            src="https://www.jotform.com/blog/wp-content/uploads/2019/10/how-to-make-a-website-700x545.png" 
+            alt="Web Development"
+            width={400}
+            height={300}
+            class="w-full max-w-md"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de servicios adicionales -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Tarjeta de Aplicativo móvil -->
+      <div class="bg-[#131316] rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-60 bg-kiwi/20 blur-2xl"></div>
+        <div class="relative z-10">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">Aplicativo móvil</h2>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Creamos apps innovadoras y personalizadas para todas las plataformas.
+          </p>
+          <a href="/contact" class="inline-flex items-center text-white hover:text-gray-200">
+            Empezar
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Asesoramiento especializado -->
+      <div class="bg-[#131316] rounded-2xl p-8 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-96 h-60 bg-kiwi/20 blur-2xl"></div>
+        <div class="relative z-10">
+          <div class="flex items-center mb-4">
+            <div class="w-8 h-8 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">Asesoramiento especializado</h2>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Te guiamos para aprovechar al máximo la tecnología disponible.
+          </p>
+          <a href="/contact" class="inline-flex items-center text-white hover:text-gray-200">
+            Empezar
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

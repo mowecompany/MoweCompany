@@ -1,0 +1,118 @@
+---
+import "@/styles/globals.css";
+---
+
+<section class="py-20 bg-vampire text-white" id="faq">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-start justify-between">
+        <!-- Texto e Introducción -->
+        <div class="md:w-1/2">
+            <h2 class="text-4xl font-bold">Preguntas más frecuentes</h2>
+            <p class="text-gray-400 max-w-lg mt-4">
+                En MOWE Company, sabemos que puedes tener preguntas sobre nuestros servicios y procesos.
+                Por eso, hemos recopilado las consultas más comunes para brindarte respuestas claras y ayudarte a tomar decisiones informadas.
+            </p>
+            <a href="/contact" class="inline-block mt-6 px-6 py-2 bg-black border-2 border-raisin text-white rounded-2xl">
+                Contáctenos
+            </a>
+        </div>
+
+        <!-- FAQ -->
+        <div class="md:w-1/2 mt-10 md:mt-0">
+            <ul class="space-y-4">
+                <!-- Pregunta 1 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Qué servicios ofrece MOWE Company?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            Ofrecemos desarrollo de páginas web, aplicaciones móviles y asesoramiento tecnológico especializado para ayudar a las empresas a digitalizarse y crecer.
+                        </p>
+                    </div>
+                </li>
+                <!-- Pregunta 2 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Cuánto tiempo toma desarrollar un proyecto?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            El tiempo depende de la complejidad del proyecto. Sin embargo, trabajamos para garantizar entregas puntuales sin comprometer la calidad.
+                        </p>
+                    </div>
+                </li>
+                <!-- Pregunta 3 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Qué tecnologías utilizan para desarrollar proyectos?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            Utilizamos tecnologías modernas como React, Kotlin, Swift, PHP y herramientas de diseño como Figma y Adobe Illustrator para asegurar calidad y eficiencia.
+                        </p>
+                    </div>
+                </li>
+                <!-- Pregunta 4 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Pueden personalizar los proyectos según nuestras necesidades?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            Sí, todos nuestros servicios están diseñados para adaptarse a tus requerimientos específicos y objetivos de negocio.
+                        </p>
+                    </div>
+                </li>
+                <!-- Pregunta 5 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Qué tan segura es la información de mis proyectos con MOWE Company?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            Garantizamos la seguridad de tu información con prácticas robustas de protección de datos y tecnologías confiables en todos nuestros procesos.
+                        </p>
+                    </div>
+                </li>
+                <!-- Pregunta 7 -->
+                <li class="faq-item bg-chinese rounded-2xl border-2 border-raisin p-4">
+                    <div class="flex justify-between items-center cursor-pointer">
+                        <span>¿Cómo puedo solicitar un presupuesto?</span>
+                        <button class="faq-toggle text-xl font-bold text-gray-400">+</button>
+                    </div>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="mt-2 text-gray-400">
+                            Puedes contactarnos a través de nuestro formulario en línea, correo electrónico o redes sociales. 
+                            Nuestro equipo estará encantado de brindarte un presupuesto personalizado.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach((item) => {
+        const toggleButton = item.querySelector('.faq-toggle') as HTMLButtonElement;
+        const content = item.querySelector('.faq-content') as HTMLElement;
+
+        if (toggleButton && content) {
+            item.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight;
+                if (isOpen) {
+                    content.style.maxHeight = '';
+                    toggleButton.textContent = '+';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    toggleButton.textContent = '-';
+                }
+            });
+        }
+    });
+</script>

@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FlickeringGridRounded } from "@/components/FlickeringGrid";
+---
+
+<Layout title="Quiénes Somos">
+
+  <!-- Quiénes Somos -->
+  <section class="min-h-screen relative overflow-hidden" id="about"> 
+    <div class="absolute inset-0 bg-gradient-to-b from-black to-vampire"></div>
+  
+    <!-- Fondo dinámico FlickeringGridRounded -->
+    <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
+      <img src="/public/bg1.svg" alt="bg" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20">
+        <FlickeringGridRounded client:load />
+      </div>
+    </div>
+  
+    <div class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 -mt-10">
+      <div class="grid grid-cols-1 gap-8 items-center w-full text-center">
+        <!-- Contenedor de los textos -->
+        <div class="relative max-w-full p-4 sm:p-6 bg-opacity-30"> 
+          <h1 class="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 sm:mb-10 
+          bg-clip-text text-transparent bg-gradient-to-r from-white to-lime-400 leading-tight sm:leading-snug relative">
+            Quiénes Somos
+          </h1>
+        </div>
+      </div>
+    </div>
+  
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-kiwi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Nuestra Historia -->
+  <section class="relative bg-black text-white py-16 lg:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Texto -->
+        <div class="text-left">
+          <h1 class="text-4xl font-bold mb-8">Nuestra Historia</h1>
+  
+          <h2 class="text-2xl font-semibold mb-4">El origen de MOWE Company</h2>
+          <p class="mb-6">
+            Mowe Company nació de una <span class="font-bold">idea compartida entre cinco amigos</span> apasionados por la tecnología
+            y el desarrollo de software: Delivds, Juan José, José Alejandro, Isaac y Fernando. Durante nuestras prácticas del SENA,
+            nos dimos cuenta de que teníamos una visión en común: crear soluciones tecnológicas innovadoras que marcaran la
+            <span class="font-bold">diferencia</span> en la vida de las personas y en el crecimiento de las empresas.
+          </p>
+  
+          <h2 class="text-2xl font-semibold mb-4">El inicio del camino</h2>
+          <p class="mb-6">
+            Lo que comenzó como un simple proyecto académico, evolucionó rápidamente en una iniciativa profesional. Al trabajar juntos
+            en nuestra primera aplicación de transporte público, aprendimos a combinar nuestras habilidades en desarrollo móvil,
+            diseño web y gestión de proyectos. Este desafío inicial nos inspiró a soñar en grande y formalizar nuestra colaboración
+            bajo el nombre de MOWE Company.
+          </p>
+  
+          <h2 class="text-2xl font-semibold mb-4">Nuestra filosofía</h2>
+          <p class="mb-6">
+            El nombre MOWE refleja movimiento e innovación, valores que están en el centro de todo lo que hacemos. Creemos que la
+            tecnología no solo resuelve problemas, sino que también crea oportunidades para un mundo más conectado y eficiente.
+          </p>
+  
+          <h2 class="text-2xl font-semibold mb-4">Nuestro compromiso</h2>
+          <p class="mb-6">
+            Desde el primer día, nuestro objetivo ha sido ofrecer servicios de calidad, respaldados por tecnologías modernas como
+            React, Kotlin, Swift y herramientas de diseño como Figma. Nos esforzamos por ser más que un simple proveedor; queremos
+            ser un socio confiable para nuestros clientes, ayudándolos a alcanzar el éxito en el entorno digital.
+          </p>
+  
+          <h2 class="text-2xl font-semibold mb-4">Hacia el futuro</h2>
+          <p>
+            MOWE Company está en constante evolución, y esta es solo la primera página de nuestra historia. Estamos emocionados por
+            todo lo que está por venir y agradecidos de que formes parte de este viaje con nosotros.
+          </p>
+        </div>
+  
+        <!-- Imagen -->
+        <div class="flex justify-center lg:justify-end">
+          <img
+            src="http://localhost:4321/public/officine.svg"
+            alt="Personas trabajando en equipo"
+            class="rounded-lg shadow-lg max-w-full lg:max-w-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>  
+</Layout>

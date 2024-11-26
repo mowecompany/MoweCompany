@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Precing from '@/components/Precing.astro';
+import { FlickeringGridRounded } from "@/components/FlickeringGrid";
+---
+
+<Layout title="Planes">
+
+  <!-- Planes -->
+  <section class="min-h-screen relative overflow-hidden" id="pricing"> 
+    <div class="absolute inset-0 bg-gradient-to-b from-black to-vampire"></div>
+  
+    <!-- Fondo dinámico FlickeringGridRounded -->
+    <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
+      <img src="/public/bg1.svg" alt="bg" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20">
+        <FlickeringGridRounded client:load />
+      </div>
+    </div>
+  
+    <div class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 -mt-10">
+      <div class="grid grid-cols-1 gap-8 items-center w-full text-center">
+        <!-- Contenedor de los textos -->
+        <div class="relative max-w-full p-4 sm:p-6 bg-opacity-30"> 
+          <h1 class="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 sm:mb-10 
+          bg-clip-text text-transparent bg-gradient-to-r from-white to-lime-400 leading-tight sm:leading-snug relative">
+            El Plan Perfecto para tu Éxito
+          </h1>
+          <p class="text-gray-300 w-1/2 mx-auto mt-4">
+            Elige el plan que mejor se adapta a tus necesidades. Diseñados para impulsar tus ideas, nuestros planes combinan innovación, 
+            calidad y flexibilidad para que alcances tus objetivos sin límites.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-kiwi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Precing -->
+  <Precing />
+</Layout>

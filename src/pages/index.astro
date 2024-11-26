@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+import Values from "@/components/Values.astro";
+import Services from "@/components/Services.astro";
+import TechStack from "@/components/TechStack.astro";
+import Call from "@/components/Call.astro";
+import Hero from "@/components/Hero.astro";
+import ChooseUs from "@/components/ChooseUs.astro";
+import Precing from "@/components/Precing.astro";
+import Blog from "@/components/Blog.astro";
+import FAQ from "@/components/FAQ.astro";
+---
+
+<Layout title="Mowe">
+  <!-- Hero Section -->
+  <Hero />
+
+  <!-- Values Section -->
+  <Values />
+
+  <!-- Services Preview -->
+  <Services />
+
+  <!-- Choose Us -->
+  <ChooseUs />
+
+  <!-- Precing -->
+  <Precing />
+
+  <!-- Tech Stack -->
+  <TechStack />
+
+  <!-- Blog -->
+  <Blog />
+
+  <!-- FAQ -->
+  <FAQ />
+
+  <!-- Call to Action -->
+  <Call />
+</Layout>
+
+<script>
+
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Hero animations
+  gsap.from("#hero h1", {
+    duration: 1.5,
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+  });
+
+  gsap.from("#hero p", {
+    duration: 1.5,
+    y: 50,
+    opacity: 0,
+    delay: 0.5,
+    ease: "power4.out",
+  });
+
+</script>

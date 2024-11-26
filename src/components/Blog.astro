@@ -1,0 +1,53 @@
+---
+import "@/styles/globals.css";  
+---
+
+<section class="py-20 bg-vampire text-white" id="blog">
+    <div class="container mx-auto px-4 mt-20 mb-20">
+        <h2 class="text-4xl font-bold text-start">Descubre nuestras ideas y novedades</h2>
+        <div class="flex items-center justify-between mt-4">
+            <p class="text-gray-400 max-w-3xl">
+                En el blog de Mowe Company, compartimos historias, conocimientos y actualizaciones sobre nuestra empresa y el mundo del desarrollo tecnológico.
+                Únete a nuestro viaje de innovación y creatividad.
+            </p>
+            <a href="/contact" class="text-center px-6 py-2 bg-black border-2 border-raisin text-white rounded-2xl">
+                Empezar
+            </a>
+        </div>
+
+        <!-- Blog Posts -->
+        <div class="grid gap-8 mt-10 md:grid-cols-2">
+            <!-- Post 1 -->
+            <div>
+                <img
+                    src="/public/articulo1.png"
+                    alt="Blog Post 1"
+                    class="rounded-2xl w-full"
+                />
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">El nacimiento de Mowe</h3>
+                    <h2 class="text-white text-3xl mt-8 font-medium">
+                        Conoce a Mowe Company y sus fundadores.
+                    </>
+                </div>
+                <p class="text-end text-gray-500 mt-1 text-sm">2 horas</p>
+            </div>
+
+            <!-- Post 2 -->
+            <div>
+                <img
+                    src="/public/articulo2.png"
+                    alt="Blog Post 2"
+                    class="rounded-2xl w-full"
+                />
+                <div class="mt-4">
+                    <h3 class="text-xl font-semibold">Primer proyecto</h3>
+                    <h2 class="text-white text-3xl mt-8 font-medium">
+                        Nuestro primer proyecto: una app que conecta en tiempo real.
+                    </h2>
+                </div>
+                <p class="text-end text-gray-500 mt-1 text-sm">5 horas</p>
+            </div>
+        </div>
+    </div>
+</section>
