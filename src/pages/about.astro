@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Precing from '@/components/Precing.astro';
+import Call from '@/components/Call.astro';
 import { FlickeringGridRounded } from "@/components/FlickeringGrid";
 ---
 
@@ -37,7 +39,7 @@ import { FlickeringGridRounded } from "@/components/FlickeringGrid";
   </section>
 
   <!-- Nuestra Historia -->
-  <section class="relative bg-black text-white py-16 lg:py-24">
+  <section class="relative bg-gradient-to-b from-black to-vampire text-white py-16 lg:py-24">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <!-- Texto -->
@@ -91,4 +93,89 @@ import { FlickeringGridRounded } from "@/components/FlickeringGrid";
       </div>
     </div>
   </section>  
+
+  <!-- Nuestros Valores -->
+  <section class="relative bg-vampire text-white py-16 lg:py-24">
+    <h1 class="text-4xl text-center font-bold">Nuestros Fundadores</h1>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+      <!-- Contenedor principal con 3 columnas -->
+      <div class="grid grid-cols-3 gap-6 h-[800px]">
+        <!-- Columna izquierda: Juan José -->
+        <div class="relative group h-full">
+          <img
+            src="https://images.unsplash.com/photo-1599834562135-b6fc90e642ca?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Juan José"
+            class="w-full h-full object-cover rounded-2xl"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+          <p class="absolute bottom-4 left-4 text-2xl font-semibold text-white">
+            Juan José
+          </p>
+        </div>
+  
+        <!-- Columna central: 3 divs -->
+        <div class="grid grid-rows-2 gap-6 h-full">
+          <!-- Div superior: Isaac -->
+          <div class="relative group">
+            <img
+              src="/public/issac.jpg"
+              alt="Isaac"
+              class="w-full h-full object-cover rounded-2xl"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+            <p class="absolute bottom-4 left-4 text-2xl font-semibold text-white">
+              Isaac
+            </p>
+          </div>
+  
+          <!-- Fila inferior con 2 columnas: José Alejandro y Fernando -->
+          <div class="grid grid-cols-2 gap-6 h-full">
+            <!-- José Alejandro -->
+            <div class="relative group h-full">
+              <img
+                src="https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="José Alejandro"
+                class="w-full h-full object-cover rounded-2xl"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+              <p class="absolute bottom-4 left-4 text-2xl font-semibold text-white">
+                José Alejandro
+              </p>
+            </div>
+            <!-- Fernando -->
+            <div class="relative group h-full">
+              <img
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Fernando"
+                class="w-full h-full object-cover rounded-2xl"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+              <p class="absolute bottom-4 left-4 text-2xl font-semibold text-white">
+                Fernando
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Columna derecha: Deivids Ortega -->
+        <div class="relative group h-full">
+          <img
+            src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Deivids Ortega"
+            class="w-full h-full object-cover rounded-2xl"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-2xl"></div>
+          <p class="absolute bottom-4 left-4 text-2xl font-semibold text-white">
+            Deivids Ortega
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precing -->
+  <Precing />
+
+  <!-- Call to Action -->
+  <Call />
 </Layout>

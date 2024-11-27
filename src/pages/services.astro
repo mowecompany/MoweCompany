@@ -1,38 +1,182 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { FlickeringGridRounded } from "@/components/FlickeringGrid";
+import Pricing from "@/components/Precing.astro";
+import Call from "@/components/Call.astro";
 ---
 
 <Layout title="Servicios">
-
-  <!-- Quiénes Somos -->
-  <section class="min-h-screen relative overflow-hidden" id="services"> 
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-vampire"></div>
-  
-    <!-- Fondo dinámico FlickeringGridRounded -->
-    <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
-      <img src="/public/bg1.svg" alt="bg" class="absolute inset-0 w-full h-full object-cover">
-      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20">
+  <!-- Nuestros Servicios -->
+  <section class="min-h-screen relative overflow-hidden" id="services">
+    <div class="absolute inset-0"></div>
+    
+    <div class="absolute inset-0 z-0">
+      <img src="/public/bg1.svg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 z-0 opacity-20">
         <FlickeringGridRounded client:load />
       </div>
     </div>
-  
-    <div class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 -mt-10">
-      <div class="grid grid-cols-1 gap-8 items-center w-full text-center">
-        <!-- Contenedor de los textos -->
-        <div class="relative max-w-full p-4 sm:p-6 bg-opacity-30"> 
-          <h1 class="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 sm:mb-10 
-          bg-clip-text text-transparent bg-gradient-to-r from-white to-lime-400 leading-tight sm:leading-snug relative">
-            Nuestros Servicios
-          </h1>
-        </div>
+
+    <div class="container mx-auto relative z-30 flex items-center justify-center h-screen px-4 sm:px-6">
+      <div class="text-center max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-lime-400">
+          Nuestros Servicios
+        </h1>
       </div>
     </div>
-  
-    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-kiwi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+
+    <div class="relative container mx-auto flex justify-center items-center">
+      <img 
+        src="/public/ServicesBg.svg" 
+        alt="Service" 
+        class="-mt-40 sm:-mt-60 md:-mt-80 shadow-xl object-cover w-full px-4 sm:px-0"
+      >
     </div>
   </section>
+
+  <!-- Web Development -->
+  <section class="text-white bg-gradient-to-b from-black to-vampire min-h-screen flex items-center px-4 sm:px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-raisin border-2 border-chinese rounded-2xl shadow-2xl relative">
+      <!-- Contenido de texto -->
+      <div class="max-w-lg md:max-w-md lg:max-w-3xl p-6 sm:p-8 md:ps-12 py-12 md:py-40">
+        <h2 class="text-xl sm:text-4xl font-bold mb-4 sm:mb-6">Desarrollo de Páginas Web</h2>
+        <p class="text-gray-400 text-base sm:text-xl leading-relaxed">
+          Creamos páginas web modernas, funcionales y totalmente adaptadas a tus necesidades.
+          Ya sea que necesites un sitio e-commerce para potenciar tu negocio, una plataforma SaaS 
+          para ofrecer servicios digitales o una página corporativa para tu empresa, en Mowe Company 
+          tenemos la experiencia y las herramientas necesarias para hacerlo realidad. Nuestro equipo 
+          combina diseño atractivo con tecnología de vanguardia para garantizar la mejor experiencia 
+          para tus usuarios.
+        </p>
+      </div>
+      <!-- Imagen Web -->
+      <div class="flex justify-center items-end w-full md:w-auto">
+        <img 
+          src="/public/webservices.png" 
+          alt="MAT Template" 
+          class="w-full max-w-lg md:max-w-2xl rounded-b-2xl md:mb-[-10px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- E-commerce -->
+  <section class="text-black bg-white min-h-screen flex flex-col items-center justify-start rounded-3xl py-8 sm:py-12 px-4 sm:px-6">
+    <div class="text-center mt-12 sm:mt-20 mb-8 sm:mb-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-kiwi to-jungle text-transparent bg-clip-text mb-8 sm:mb-12">
+        Tu Tienda Online, <br>
+        <span class="text-black">Como nunca antes.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-600 mx-auto max-w-2xl px-4">
+        Imagina una plataforma de e-commerce <span class="text-black font-bold">elegante,</span> 
+        <span class="text-black font-bold">rápida</span> y <span class="text-black font-bold">fácil de usar.</span> 
+        Diseñada para destacar tus productos y optimizar la experiencia del cliente, 
+        ayudándote a <span class="text-black font-bold">vender más</span> con <span class="text-black font-bold">menos esfuerzo.</span>
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-2 md:space-x-8 mt-8 mb-12 sm:mb-24">
+      <img src="https://bentogrids.com/cdn-cgi/image/width=2048,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/clt44qs2x0000petqnujsh5ss.png" 
+      alt="Shop" class="w-full max-w-4xl rounded-2xl">
+      <img src="https://bentogrids.com/cdn-cgi/image/width=2048,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/clt9vrtf400037uy5ljaz5ats.png" 
+      alt="Shop" class="w-full max-w-4xl rounded-2xl">
+    </div>
+  </section>
+
+  <!-- Mobile Development -->
+  <section class="text-white bg-vampire min-h-screen flex items-center px-4 sm:px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-raisin border-2 border-chinese rounded-2xl shadow-2xl relative">
+      <!-- Contenido de texto -->
+      <div class="max-w-lg md:max-w-md lg:max-w-3xl p-6 sm:p-8 md:ps-12 py-12 md:py-40">
+        <h2 class="text-xl sm:text-4xl font-bold mb-4 sm:mb-6">Desarrollo de Aplicaciones Móviles</h2>
+        <p class="text-gray-400 text-base sm:text-xl leading-relaxed">
+          Llevamos tus ideas a la palma de la mano de tus usuarios. Diseñamos y desarrollamos aplicaciones móviles a medida, 
+          asegurándonos de que se adapten perfectamente a las necesidades de tu negocio. Desde aplicaciones nativas hasta híbridas, 
+          utilizamos tecnologías como Kotlin, Jetpack Compose y Swift para garantizar rendimiento, funcionalidad y un diseño excepcional.
+        </p>
+      </div>
+      <!-- Imagen App -->
+      <div class="flex justify-center items-end w-full md:w-auto">
+        <img 
+          src="/public/webservices.png" 
+          alt="MAT Template" 
+          class="w-full max-w-lg md:max-w-2xl rounded-b-2xl md:mb-[-10px]"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- App E-commerce -->
+  <section class="text-black bg-white min-h-screen flex flex-col items-center justify-start rounded-3xl py-8 sm:py-12 px-4 sm:px-6">
+    <div class="text-center mt-12 sm:mt-20 mb-8 sm:mb-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-kiwi to-jungle text-transparent bg-clip-text mb-8 sm:mb-12">
+        La herramienta que siempre soñaste, <br>
+        <span class="text-black">en la palma de tu mano.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-600 mx-auto max-w-5xl px-4">
+        Desarrollamos aplicaciones <span class="text-black font-bold">intuitivas</span> y <span class="text-black font-bold">poderosas</span>, 
+        personalizadas para tus objetivos. Desde la <span class="text-black font-bold">idea</span>
+        hasta la <span class="text-black font-bold">experiencia final</span>, todo está diseñado para conectar con tus usuarios de forma 
+        <span class="text-black font-bold">rápida</span> y <span class="text-black font-bold">efectiva</span>.
+      </p>
+    </div>
+
+    <!-- Images App E-commerce -->
+    <div class="flex justify-center w-full px-4 sm:px-8">
+      <img src="/public/MockupMovile.svg" alt="Shop" class="w-full max-w-9xl rounded-b-2xl md:mb-[-50px]">
+    </div>
+  </section>
+
+  <!-- Asesoramiento -->
+  <section class="text-white bg-vampire min-h-screen flex items-center px-4 sm:px-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between bg-raisin border-2 border-chinese rounded-2xl shadow-2xl relative">
+      <!-- Contenido de texto -->
+      <div class="max-w-lg md:max-w-md lg:max-w-3xl p-6 sm:p-8 md:ps-12 py-12 md:py-40">
+        <h2 class="text-xl sm:text-4xl font-bold mb-4 sm:mb-6">Asesoramiento Tecnológico Especializado</h2>
+        <p class="text-gray-400 text-base sm:text-xl leading-relaxed">
+          En MOWE Company, no solo desarrollamos proyectos, también te acompañamos en cada paso del camino. 
+          Ofrecemos asesoramiento personalizado para ayudarte a tomar las mejores decisiones tecnológicas según los objetivos de tu negocio. 
+          Desde definir la arquitectura de tu sistema hasta optimizar tu proyecto en curso, nuestro equipo está listo para guiarte hacia el éxito.
+        </p>
+      </div>
+      <!-- Imagen Asesoramiento -->
+      <div class="flex justify-center items-end w-full md:w-auto">
+        <img 
+          src="/public/webservices.png" 
+          alt="MAT Template" 
+          class="w-full max-w-lg md:max-w-2xl rounded-b-2xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Section -->
+  <section class="text-black bg-white min-h-screen flex flex-col items-center justify-start rounded-3xl py-8 sm:py-12 px-4 sm:px-6">
+    <div class="text-center mt-12 sm:mt-20 mb-8 sm:mb-12">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-kiwi to-jungle text-transparent bg-clip-text mb-8 sm:mb-12">
+        Soluciones claras <br>
+        <span class="text-black">para decisiones inteligentes.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-600 mx-auto max-w-5xl px-4">
+        Recibe orientación experta para transformar tus ideas en <span class="text-black font-bold">proyectos sólidos.
+        </span> Con nuestra experiencia, te ayudamos a optimizar recursos y a implementar <span class="text-black font-bold">estrategias</span>
+        que marcan la <span class="text-black font-bold">diferencia.</span>
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-2 md:space-x-8 mt-8 mb-12 sm:mb-24">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+      alt="Shop" class="w-full max-w-4xl rounded-2xl">
+      <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+      alt="Shop" class="w-full max-w-4xl rounded-2xl">
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <Pricing />
+
+  <!-- Call to Action -->
+  <Call />
 </Layout>

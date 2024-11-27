@@ -13,4 +13,6 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  site: 'https://mowecompany.github.io',
+  base: 'MoweCompany',
 });
