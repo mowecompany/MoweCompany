@@ -1,32 +1,170 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { FlickeringGridRounded } from "@/components/FlickeringGrid";
+import { Image } from 'astro:assets';
+
+// Lista de proyectos
+const projects = [
+  {
+    id: 1,
+    image: {
+      src: 'https://bentogrids.com/cdn-cgi/image/width=1080,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/cm0z12g1y00009bjghjp24hte.png',
+      width: 1080,
+      height: 720,
+      format: 'webp',
+      alt: 'Proyecto 1'
+    },
+    title: 'Proyecto 1',
+    description: 'Descripción del proyecto 1.',
+  },
+  {
+    id: 2,
+    image: {
+      src: 'https://bentogrids.com/cdn-cgi/image/width=1080,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/cm3yrqqpd0000bvjb9lamibue.png', 
+      width: 1080,
+      height: 720,
+      format: 'webp',
+      alt: 'Proyecto 2'
+    },
+    title: 'Proyecto 2',
+    description: 'Descripción del proyecto 2.',
+  },
+  {
+    id: 3,
+    image: {
+      src: 'https://bentogrids.com/cdn-cgi/image/width=1080,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/clzju3zsd000k12leqjal960w.png',
+      width: 1080, 
+      height: 720,
+      format: 'webp',
+      alt: 'Proyecto 3'
+    },
+    title: 'Proyecto 3',
+    description: 'Descripción del proyecto 3.',
+  },
+  {
+    id: 4,
+    image: {
+      src: 'https://bentogrids.com/cdn-cgi/image/width=1080,metadata=none,fit=scale-down,format=auto/https://s.bentogrids.com/clue0otrn0005867ta8lproze.png',
+      width: 1080,
+      height: 720, 
+      format: 'webp',
+      alt: 'Frame project'
+    },
+    title: 'frame',
+    description: 'Elevate your creative workflow to an art form.',
+  },
+];
+
 ---
 
 <Layout title="Portfolio">
+  <script>
+    import gsap from 'gsap';
+    import ScrollTrigger from 'gsap/ScrollTrigger';
+    
+    gsap.registerPlugin(ScrollTrigger);
 
-  <!-- Quiénes Somos -->
-  <section class="min-h-screen relative overflow-hidden" id="portfolio"> 
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-vampire"></div>
+    // Animación del título principal
+    gsap.from('.hero-title', {
+      y: -50,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power4.out'
+    });
+
+    // Animación del video de fondo
+    gsap.from('.bg-video', {
+      opacity: 0,
+      duration: 1.5,
+      delay: 0.5
+    });
+
+    // Animación para la descripción
+    gsap.from('.project-description', {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: '.project-description',
+        start: 'top center+=200',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  </script>
+
+  <!-- Portfolio -->
+  <section class="min-h-[100svh] relative overflow-hidden" id="portfolio"> 
+    <!-- Fondo en degradado optimizado -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-vampire"></div>
   
-    <!-- Fondo dinámico FlickeringGridRounded -->
-    <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
-      <img src="/MoweCompany/bg1.svg" alt="bg" class="absolute inset-0 w-full h-full object-cover">
-      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20">
-        <FlickeringGridRounded client:load />
-      </div>
+    <!-- Fondo dinámico: video con lazy loading -->
+    <div class="absolute inset-0 z-0 w-full h-full pointer-events-none bg-video">
+      <video 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover">
+        <source src="https://videos.pexels.com/video-files/4763824/4763824-uhd_2560_1440_24fps.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
     </div>
   
-    <div class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 -mt-10">
-      <div class="grid grid-cols-1 gap-8 items-center w-full text-center">
-        <!-- Contenedor de los textos -->
-        <div class="relative justify-start max-w-full p-4 sm:p-6 bg-opacity-30"> 
-          <h1 class="block text-left text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 sm:mb-10 
-          bg-clip-text from-white leading-tight sm:leading-snug relative">
-          Proyectos que Transforman <br> Ideas en Realidades
+    <!-- Contenedor principal -->
+    <div class="mx-auto relative z-10 h-[100svh] flex items-end px-4 sm:px-6 lg:px-8 -mb-10">
+      <div class="w-full text-left">
+        <div class="relative justify-start max-w-full p-4 sm:p-6">
+          <h1 class="hero-title text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-10 text-white leading-tight sm:leading-snug">
+            Proyectos que Transforman <br class="hidden sm:block" /> Ideas en Realidades
           </h1>
         </div>
       </div>
     </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-kiwi hover:text-kiwi/80 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
   </section>  
+
+  <!-- Proyectos Descripción -->
+  <section class="bg-white text-black">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32">
+      <p class="project-description text-center text-lg sm:text-xl lg:text-2xl font-medium mb-16 sm:mb-20 text-black/80 leading-relaxed max-w-4xl mx-auto">
+        Explora cómo nuestras soluciones innovadoras han dado vida a grandes ideas. 
+        Cada proyecto es un reflejo de nuestra pasión, compromiso y dedicación para impulsar el éxito de nuestros clientes.
+      </p>
+      <h2 class="text-start text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold pb-12 mt-12 text-black leading-tight tracking-tight">
+        PROYECTOS
+      </h2>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="bg-white text-black min-h-screen py-16 sm:py-24">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        {projects.map((project) => (
+          <article
+            data-key={project.id}
+            class="project-card group relative bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div class="aspect-w-16 aspect-h-9 overflow-hidden">
+              <Image 
+                src={project.image.src}
+                alt={project.image.alt}
+                width={project.image.width}
+                height={project.image.height}
+                class="w-full h-full object-cover group-hover:scale-105 rounded-2xl transition-transform duration-500 ease-out"
+              />
+            </div>
+            <div class="p-6 sm:p-8">
+              <h3 class="text-xl sm:text-2xl font-bold mb-3 group-hover:text-jungle transition-colors">{project.title}</h3>
+              <p class="text-gray-600 group-hover:text-gray-800 transition-colors">{project.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
 </Layout>

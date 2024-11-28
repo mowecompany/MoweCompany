@@ -1,7 +1,15 @@
 <footer class="relative bg-vampire text-white overflow-hidden px-4">
   <!-- Fondo del footer -->
   <div class="absolute inset-0 bg-gradient-to-t from-green-500/20 to-vampire">
-    <img src="/MoweCompany/bgFooter.svg" alt="Mowe Company Background" class="w-full h-full object-cover opacity-30">
+    <img 
+      src="/MoweCompany/bgFooter.svg" 
+      alt="Mowe Company Background" 
+      class="w-full h-full object-cover opacity-30"
+      loading="lazy"
+      decoding="async"
+      width="1920"
+      height="1080"
+    >
   </div>
 
   <!-- Contenido del footer -->
@@ -12,40 +20,40 @@
       <div>
         <!-- Logo -->
         <div class="mb-6">
-          <img src="/MoweCompany/Imagotipo.svg" alt="Mowe Company Logo" class="h-8">
+          <img 
+            src="/MoweCompany/Imagotipo.svg" 
+            alt="Mowe Company Logo" 
+            class="h-8"
+            loading="lazy"
+            decoding="async"
+            width="120"
+            height="32"
+          >
         </div>
         <h3 class="text-gray-400 text-start font-semibold mb-4">Síguenos</h3>
         <ul class="space-y-2">
-          <li>
-            <a href="#" class="flex items-center hover:text-kiwi">
-              <img src="/MoweCompany/tiktok.svg" alt="TikTok" class="h-5 w-5 mr-2">
-              TikTok
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center hover:text-kiwi">
-              <img src="/MoweCompany/instagram.svg" alt="Instagram" class="h-5 w-5 mr-2">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center hover:text-kiwi">
-              <img src="/MoweCompany/youtube.svg" alt="Youtube" class="h-5 w-5 mr-2">
-              Youtube
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center hover:text-kiwi">
-              <img src="/MoweCompany/x.svg" alt="Twitter" class="h-5 w-5 mr-2">
-              X
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center hover:text-kiwi">
-              <img src="/MoweCompany/facebook.svg" alt="Facebook" class="h-5 w-5 mr-2">
-              Facebook
-            </a>
-          </li>
+          {[
+            { name: 'TikTok', icon: 'tiktok.svg' },
+            { name: 'Instagram', icon: 'instagram.svg' },
+            { name: 'Youtube', icon: 'youtube.svg' },
+            { name: 'X', icon: 'x.svg' },
+            { name: 'Facebook', icon: 'facebook.svg' }
+          ].map(social => (
+            <li>
+              <a href="#" class="flex items-center hover:text-kiwi transition-colors duration-300">
+                <img 
+                  src={`/MoweCompany/${social.icon}`} 
+                  alt={social.name}
+                  class="h-5 w-5 mr-2"
+                  loading="lazy"
+                  decoding="async"
+                  width="20"
+                  height="20"
+                >
+                {social.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -53,13 +61,24 @@
       <div>
         <h3 class="text-gray-400 font-semibold mb-4">Pages</h3>
         <ul class="space-y-2">
-          <li><a href="/MoweCompany/" class="hover:text-kiwi">Inicio</a></li>
-          <li><a href="/MoweCompany/services" class="hover:text-kiwi">Servicios</a></li>
-          <li><a href="/MoweCompany/pricing" class="hover:text-kiwi">Planes</a></li>
-          <li><a href="/MoweCompany/about" class="hover:text-kiwi">Nosotros</a></li>
-          <li><a href="/MoweCompany/contact" class="hover:text-kiwi">Contacto</a></li>
-          <li><a href="/MoweCompany/blog" class="hover:text-kiwi">Blog</a></li>
-          <li><a href="/MoweCompany/faq" class="hover:text-kiwi">FAQ</a></li>
+          {[
+            { name: 'Inicio', path: '/' },
+            { name: 'Servicios', path: '/services' },
+            { name: 'Planes', path: '/pricing' },
+            { name: 'Nosotros', path: '/about' },
+            { name: 'Contacto', path: '/contact' },
+            { name: 'Blog', path: '/blog' },
+            { name: 'FAQ', path: '/faq' }
+          ].map(page => (
+            <li>
+              <a 
+                href={`/MoweCompany${page.path}`} 
+                class="hover:text-kiwi transition-colors duration-300"
+              >
+                {page.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -67,13 +86,24 @@
       <div>
         <h3 class="text-gray-400 font-semibold mb-4">CMS Pages</h3>
         <ul class="space-y-2">
-          <li><a href="/MoweCompany/blog" class="hover:text-kiwi">Blog Post Single</a></li>
-          <li><a href="/MoweCompany/blog" class="hover:text-kiwi">Blog Category</a></li>
-          <li><a href="/MoweCompany/jobs" class="hover:text-kiwi">Job Listing Single</a></li>
-          <li><a href="/MoweCompany/jobs" class="hover:text-kiwi">Job Category</a></li>
-          <li><a href="/MoweCompany/team" class="hover:text-kiwi">Team Member</a></li>
-          <li><a href="/MoweCompany/products" class="hover:text-kiwi">Product Single</a></li>
-          <li><a href="/MoweCompany/products" class="hover:text-kiwi">Product Category</a></li>
+          {[
+            { name: 'Blog Post Single', path: '/blog' },
+            { name: 'Blog Category', path: '/blog' },
+            { name: 'Job Listing Single', path: '/jobs' },
+            { name: 'Job Category', path: '/jobs' },
+            { name: 'Team Member', path: '/team' },
+            { name: 'Product Single', path: '/products' },
+            { name: 'Product Category', path: '/products' }
+          ].map(page => (
+            <li>
+              <a 
+                href={`/MoweCompany${page.path}`} 
+                class="hover:text-kiwi transition-colors duration-300"
+              >
+                {page.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

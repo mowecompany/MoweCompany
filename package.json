@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.2",
+    "@emailjs/browser": "^4.4.1",
     "@formspree/react": "^2.5.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@types/react": "^18.3.12",
@@ -20,15 +21,21 @@
     "astro": "^4.16.13",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.11.17",
     "gsap": "^3.12.5",
     "lucide-react": "^0.460.0",
     "mapbox-gl": "^2.15.0",
+    "nodemailer": "^6.9.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss": "^3.4.15",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/nodemailer": "^6.4.17"
   }
 }

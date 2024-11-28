@@ -1,27 +1,85 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import { FlickeringGridRounded } from "@/components/FlickeringGrid";
 ---
 
 <Layout title="Contacto">
   <!-- Contacto -->
-  <section class="min-h-screen relative overflow-hidden" id="contact"> 
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-vampire"></div>
-  
+  <section class="min-h-screen relative overflow-hidden" id="contact">
+    <!-- Fondo degradado -->
+    <div class="absolute"></div>
+
     <!-- Fondo dinámico FlickeringGridRounded -->
     <div class="absolute inset-0 z-0 w-full h-full pointer-events-none">
-      <img src="/MoweCompany/bg1.svg" alt="bg" class="absolute inset-0 w-full h-full object-cover">
-      <div class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20">
+      <img
+        src="/MoweCompany/bg1.svg"
+        alt="bg"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 z-0 w-full h-full pointer-events-none opacity-20"
+      >
         <FlickeringGridRounded client:load />
       </div>
     </div>
-  
-    <div class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 -mt-10">
-      <div class="grid grid-cols-1 gap-8 items-center w-full text-center">
-        <!-- Contenedor de los textos -->
-        <div class="relative max-w-full p-4 sm:p-6 bg-opacity-30"> 
-          
+
+    <!-- Contenido -->
+    <div
+      class="container mx-auto relative z-10 h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+    >
+      <!-- Card de contacto -->
+      <div class="bg-black rounded-2xl p-12 w-full max-w-lg">
+        <!-- Logo -->
+        <div class="mb-2 text-left">
+          <img
+            src="/MoweCompany/favicon.svg"
+            alt="Logo Mowe"
+            class="h-8"
+          />
         </div>
+        <!-- Formulario -->
+        <form class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-white">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Jhon"
+              required
+              class="mt-1 py-2 px-4 block w-full bg-raisin border border-chinese rounded-xl text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-white">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="example@example.com"
+              required
+              class="mt-1 py-2 px-4 block w-full bg-raisin border border-chinese rounded-xl text-white focus:ring-green-500 focus:border-green-500"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-white">Messenger</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder=""
+              required
+              class="mt-1 py-2 px-4 block w-full bg-raisin border border-chinese rounded-xl text-white focus:ring-green-500 focus:border-green-500"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full py-2 px-4 bg-raisin border border-chinese rounded-2xl text-white font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >Enviar mensaje
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
