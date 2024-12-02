@@ -18,6 +18,9 @@ const mobileIcons = [
 ];
 
 const currentPath = Astro.url.pathname;
+const normalizedCurrentPath = currentPath.endsWith('/') 
+  ? currentPath.slice(0, -1) 
+  : currentPath;
 ---
 
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
@@ -37,7 +40,7 @@ const currentPath = Astro.url.pathname;
           <a 
             href={item.href}
             class={`transition-all hover:scale-110 text-sm ${
-              currentPath === item.href 
+              normalizedCurrentPath === item.href 
                 ? 'text-kiwi font-medium' 
                 : 'text-white/70 hover:text-kiwi'
             }`}
@@ -58,7 +61,7 @@ const currentPath = Astro.url.pathname;
           class={`${
             icon.isHome 
               ? 'bg-kiwi p-2 rounded-full hover:scale-110 transition-transform' 
-              : currentPath === icon.href
+              : normalizedCurrentPath === icon.href
                 ? 'text-kiwi'
                 : 'text-white/70 hover:text-kiwi'
           }`}
