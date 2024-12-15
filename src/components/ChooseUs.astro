@@ -1,5 +1,6 @@
 ---
 import "@/styles/globals.css";
+import NumberTicker from '@/components/ui/number-ticker';
 ---
 
 <section class="bg-vampire py-16" id="choose-us">
@@ -18,11 +19,11 @@ import "@/styles/globals.css";
         </p>
         <div class="flex gap-4 mt-6">
           <div class="bg-[#131316] border-2 border-[#1E1E22] p-4 rounded-xl text-center">
-            <p class="text-4xl font-bold text-gray-300">90<span class="text-green-500">%</span></p>
+            <p class="text-4xl font-bold text-gray-300"><NumberTicker client:load value={90} /><span class="text-green-500">%</span></p>
             <p class="text-gray-300 font-bold">Satisfacción del cliente</p>
           </div>
           <div class="bg-[#131316] p-4 border-2 border-[#1E1E22] rounded-xl text-center">
-            <p class="text-4xl font-bold text-gray-300">80<span class="text-green-500">%</span></p>
+            <p class="text-4xl font-bold text-gray-300"><NumberTicker client:load value={80} /><span class="text-green-500">%</span></p>
             <p class="text-gray-300 font-bold">Proyectos entregados <br>antes del plazo</p>
           </div>
         </div>
