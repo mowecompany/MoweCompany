@@ -15,12 +15,12 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
       </div>
     </div>
   
-    <div class="container mx-auto relative z-10 h-screen flex items-center px-4 sm:px-6 lg:px-8 -mt-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
+    <div class="container mx-auto relative z-10 h-screen flex items-center px-2 xs:px-4 sm:px-6 lg:px-8 -mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center w-full">
         <!-- Contenedor de los textos -->
-        <div class="relative max-w-full self-start p-4 sm:p-6 bg-opacity-30">
-          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-10 
-              inline-block px-3 sm:px-4 py-1 bg-black/30 text-white text-xs sm:text-sm 
+        <div class="relative max-w-full self-start p-2 xs:p-3 sm:p-4 md:p-6 bg-opacity-30">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-6 xs:-translate-y-8 sm:-translate-y-10 
+              inline-block px-2 xs:px-3 sm:px-4 py-1 bg-black/30 text-white text-[8px] xs:text-xs sm:text-sm 
               border border-sea rounded-full
               shadow-[0_0_20px_5px_rgba(163,230,53,0.3)]
               before:absolute before:inset-0 before:-z-10 
@@ -29,33 +29,35 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
             Mowe: Tu futuro, transformado
           </div>
           
-          <h1 class="block text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 sm:mb-10 
+          <h1 class="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 xs:mb-4 sm:mb-6 md:mb-8
           bg-clip-text text-transparent bg-gradient-to-r from-white to-lime-400 leading-tight sm:leading-snug relative">
             Transformamos Ideas en 
-            <span class="text-kiwi block mt-4 sm:mt-8">
+            <span class="text-kiwi block mt-1 xs:mt-2 sm:mt-4 md:mt-6">
               Experiencias
             </span>
-            <span class="text-kiwi block mt-4 sm:mt-8">
+            <span class="text-kiwi block mt-1 xs:mt-2 sm:mt-4 md:mt-6">
               Digitales
             </span>
           </h1>
-          <div class="flex flex-wrap gap-4 sm:gap-8">
-            <a href="/MoweCompany/contact" class="px-6 py-3 bg-jungle border-kiwi border text-kiwi font-bold 
-            rounded-lg text-sm sm:text-base shadow-lg hover:bg-kiwi/70 transition">Iniciar Proyecto</a>
+          <div class="flex flex-wrap gap-2 xs:gap-3 sm:gap-4 md:gap-6">
+            <a href="/MoweCompany/contact" class="px-3 xs:px-4 sm:px-5 md:px-6 py-1.5 xs:py-2 sm:py-2.5 md:py-3 bg-black/30 backdrop-blur-sm border-2 border-kiwi text-kiwi font-bold 
+            rounded-xl text-xs xs:text-sm sm:text-base shadow-[0_0_20px_rgba(163,230,53,0.3)] 
+            hover:bg-kiwi hover:text-black hover:scale-105 transition-all duration-300 
+            hover:shadow-[0_0_30px_rgba(163,230,53,0.5)]">Iniciar Proyecto</a>
             <RainbowButton client:load scrollToId="services">Descubre Más</RainbowButton>
           </div>
         </div>
 
         <!-- Contenedor de la imagen -->
-        <div class="flex justify-center items-center mt-8 md:mt-0">
+        <div class="flex justify-center items-center mt-4 xs:mt-6 md:mt-0">
           <img src="/MoweCompany/favicon.svg" alt="Logo animation" 
-          class="w-full max-w-[280px] sm:max-w-[400px] md:max-w-xl md:ml-0 lg:ml-40">
+          class="w-full max-w-[150px] xs:max-w-[200px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-xl md:ml-0 lg:ml-40">
         </div>
       </div>
     </div>
   
-    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-kiwi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="absolute bottom-6 xs:bottom-8 sm:bottom-12 md:bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <svg class="w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-kiwi" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
     </div>
